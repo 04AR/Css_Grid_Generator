@@ -1,0 +1,147 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #ffffff;
+  /* color: #b9a472; */
+  line-height: 1.6;
+}
+header,
+main,
+footer {
+  max-width: 1200px;
+  margin: auto;
+}
+header {
+  padding: 10px 0;
+  text-align: center;
+}
+h1 {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.controls label {
+  font-weight: bold;
+}
+.controls input {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #555;
+}
+/* Fixed width so the overall grid size remains constant */
+.grid-container {
+  width: 800px;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: #f0f0f0;
+  gap: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 300px;
+  /* grid-template-columns and grid-template-rows will be set dynamically */
+}
+.grid-item {
+  position: relative;
+  background-color: #bfbfbf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  transition: box-shadow 0.2s;
+}
+.grid-item:active {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Editable label for independent naming */
+.grid-item .grid-label {
+  text-align: center;
+  cursor: text;
+}
+/* Resize handle at bottom-right */
+.resize-handle {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: se-resize;
+}
+/* Remove button at top-right */
+.remove-button {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #ff4c4c;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 20px;
+  text-align: center;
+}
+/* Style for add button cells */
+.add-item {
+  background-color: #d3d3d3;
+  border: 1px dashed #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.add-item:hover {
+  background-color: #bbb;
+}
+.reset-button {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.code-container {
+  margin-top: 20px;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced CSS Grid Generator | Drag, Resize, Remove &amp; Customize Grid Layouts</title>
+    <meta name="description"
+        content="An advanced CSS Grid Generator tool that allows you to create responsive grid layouts with drag and drop, resizable and removable grid items, and customizable labels.">
+    <meta name="keywords"
+        content="CSS grid, grid generator, drag and drop, resizable grid, removable grid item, responsive layout, SEO friendly">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Robots meta tag to allow indexing -->
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Advanced CSS Grid Generator</h1>
+        <p>Create responsive, drag-and-drop grid layouts with resizable, removable items and customizable labels.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Instructions</h2>
+            <ol>
+                <li>
+                    <strong>Set Grid Parameters:</strong> Enter the desired number of columns, rows, and gap size using
+                    the input fields at the top. The grid updates automatically as you adjust these values.
+                </li>
+                <li>
+                    <strong>Add Grid Items:</strong> In any empty cell, click the <em>"+"</em> button to add a new grid
+                    item. Each item appears with a default name that you can edit directly.
+                </li>
+                <li>
+                    <strong>Drag and Drop:</strong> Click and drag any grid item (avoiding its label and control
+                    handles) to reposition it within the grid. The item's new position updates based on where you drop
+                    it.
+                </li>
+                <li>
+                    <strong>Resize Grid Items:</strong> Use the resize handle located at the bottom-right corner of a
+                    grid item to adjust its size. The item will expand to cover multiple grid cells as you drag.
+                </li>
+                <li>
+                    <strong>Remove Grid Items:</strong> Click the red cross (<em>&times;</em>) in the top-right corner
+                    of a grid item to remove it from the layout.
+                </li>
+                <li>
+                    <strong>Generate Code:</strong> Click the "Generate Code" button to view the HTML and CSS code for
+                    your current grid layout, including each item’s position, span, and custom name.
+                </li>
+                <li>
+                    <strong>Reset Grid:</strong> Use the "Reset" button to clear all grid items and start over with a
+                    fresh layout.
+                </li>
+            </ol>
+        </section>
+
+        <section class="controls">
+            <label>Columns:
+                <input type="number" id="columns" value="5" min="1">
+            </label>
+            <label>Rows:
+                <input type="number" id="rows" value="6" min="1">
+            </label>
+            <label>Gap(px):
+                <input type="number" id="gap" value="5" min="0">
+            </label>
+            <button id="generateCode">Generate Code</button>
+        </section>
+
+        <section class="grid-container" id="gridContainer"></section>
+        <button class="reset-button" id="resetGrid">Reset</button>
+
+        <section class="code-container" id="codeContainer" style="display:none;">
+            <h2>Generated Code</h2>
+            <pre id="generatedCode"></pre>
+        </section>
+    </main>
+    <footer>
+        <p> made by dev for devs 🧑‍💻.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
